@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
 body {
   overflow: hidden;
   margin: 0px;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   color: white;
   text-align: center;
   font-family: 'Noto Sans KR';
+  min-width: 1000px;
 }
 
 span, h1, h2, h3, p {
@@ -22,6 +24,8 @@ span, h1, h2, h3, p {
   height: 100%;
   background-size: cover;
   z-index: -1;
+  filter: blur(5px) brightness(90%);
+  transform: scale(1.05);
 }
 
 .show {
@@ -37,7 +41,7 @@ span, h1, h2, h3, p {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -86,7 +90,7 @@ span, h1, h2, h3, p {
 
 ul {
   max-height: 250px;
-  overflow-y: scroll;
+  overflow-y: auto;
   list-style: none;
   padding: 0px;
 }
@@ -103,6 +107,7 @@ ul li {
   user-select: none;
   padding: 0px 20px;
   text-align: left;
+  height: 30px;
 }
 
 ul li:hover {
@@ -128,4 +133,28 @@ ul li button {
   border: 0px;
   outline: 0px;
   cursor: pointer;
+}
+
+.member-list {
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  left: 50px;
+  transform: translate(0px, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+}
+
+.member-ul {
+  max-height: 200px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.ul-title {
+  color: black;
+  text-shadow: none;
+}
+
+b {
+  font-weight: 700;
 }

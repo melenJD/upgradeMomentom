@@ -3,6 +3,8 @@ const message = name.querySelector('.welcome-message');
 const nameForm = name.querySelector('.name-form');
 const input = nameForm.querySelector('input');
 const resetBtn = name.querySelector('button');
+const memberList = document.querySelector('.member-list');
+const memberUl = document.querySelector('.member-ul');
 
 function setName(text) {
   localStorage.setItem(USER_LS, text);
@@ -16,11 +18,13 @@ function getName() {
     message.classList.add('hide');
     resetBtn.classList.add('hide');
     todo.classList.add('hide');
+    memberList.classList.remove('hide');
   }else{
     nameForm.classList.add('hide');
     message.classList.remove('hide');
     resetBtn.classList.remove('hide');
     todo.classList.remove('hide');
+    memberList.classList.add('hide');
     message.innerHTML = `어서오세요 <b>${username}</b>님`
   }
 }
@@ -30,6 +34,7 @@ function handleReset(event) {
   getName();
   pendUl.innerHTML = '';
   finishUl.innerHTML = '';
+  memberListUpdate();
 }
 
 function handleSubmit(event) {
