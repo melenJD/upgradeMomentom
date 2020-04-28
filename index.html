@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모멘똠</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <div class="time-container">
+      <h1></h1>
+    </div>
+    <div class="name-container">
+      <span class="welcome-message show">Welcome</span>
+      <form class="name-form show">
+        <input type="text" id="name-text" class="name-text inputbox" required autocomplete="off" placeholder="이름을 입력해주세요">
+      </form>
+      <button>RESET</button>
+    </div>
+    <div class="todo-container">
+      <form class="todo-form">
+        <input type="text" id="todo-text" class="todo-text inputbox" required autocomplete="off" placeholder="목록을 작성해주세요">
+      </form>
+      <h3>할일</h3>
+      <ul class="todo-pend"></ul>
+      <h3>완료</h3>
+      <ul class="todo-finish"></ul>
+    </div>
+  </div>
+
+  <script src="src/time.js"></script>
+  <script src="src/todo.js"></script>
+  <script src="src/name.js"></script>
+</body>
+</html>

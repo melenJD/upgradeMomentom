@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans+KR&display=swap');
+
+body {
+  overflow: hidden;
+  margin: 0px;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  font-family: 'Noto Sans KR';
+}
+
+span, h1, h2, h3, p {
+  margin: 0px;
+  user-select: none;
+}
+
+.background {
+  position: absolute;
+  background-image: url('background.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.time-container {
+  margin: 20px 0px;
+}
+
+.time-container h1 {
+  font-size: 75pt;
+  font-family: 'Cutive Mono';
+  letter-spacing: -5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.inputbox {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 20pt;
+  outline: 0px;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.inputbox::placeholder {
+  color: white;
+}
+
+.welcome-message {
+  font-size: 25pt;
+  user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.name-container button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: 0px;
+  outline: 0px;
+}
+
+ul {
+  max-height: 250px;
+  overflow-y: scroll;
+  list-style: none;
+  padding: 0px;
+}
+
+ul::-webkit-scrollbar {width: 5px; cursor: pointer;}
+ul::-webkit-scrollbar-track { background-color:rgba(255, 255, 255, 0.3); border-radius: 5px; }
+ul::-webkit-scrollbar-thumb { background: white; border-radius: 5px; }
+ul::-webkit-scrollbar-thumb:hover { background: white; }
+ul::-webkit-scrollbar-thumb:active { background: white; }
+ul::-webkit-scrollbar-button {display: none;}
+
+ul li {
+  position: relative;
+  user-select: none;
+  padding: 0px 20px;
+  text-align: left;
+}
+
+ul li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+ul li span {
+  position: relative;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+ul li button {
+  position: relative;
+  padding: 0px 5px;
+  float: right;
+  line-height: 30px;
+  background-color: transparent;
+  border: 0px;
+  outline: 0px;
+  cursor: pointer;
+}
