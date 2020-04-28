@@ -37,18 +37,19 @@ function createLi(text, newID, handleDel, handleFin, finText) {
 }
 
 function removeList(event, type, ul) {
+  const owner = localStorage.getItem(USER_LS);
   const temp = event.target.parentNode;
   ul.removeChild(temp);
 
   if(type){
     console.log(type);
     pending = pending.filter(todo => {
-      return parseInt(todo.id) !== parseInt(temp.id);
+      return (parseInt(todo.id) !== parseInt(temp.id)) || (todo.owner !== owner);
     })
   }else{
     console.log(type);
     finish = finish.filter(todo => {
-      return parseInt(todo.id) !== parseInt(temp.id);
+      return (parseInt(todo.id) !== parseInt(temp.id)) || (todo.owner !== owner);
     })
   }
 
@@ -66,7 +67,7 @@ function saveList() {
 }
 
 function addList(text, finText, finText2, ul, ul2, type, owner) {
-  const newID = (type ? pending.length : finish.length) + 1;
+  const newID = (type ? (pending[pending.length - 1] ? pending[pending.length - 1].id : 0) : (finish[finish.length - 1] ? finish[finish.length - 1].id : 0)) + 1;
   const data = {
     text: text,
     id: newID,
